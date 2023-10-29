@@ -31,3 +31,28 @@ const onlyNumbers = (charset) =>
   }
   return answ;
 };
+
+// Cтрока короче 20 символов
+lenString('проверяемая строка', 20); // true
+// Длина строки ровно 18 символов
+lenString('проверяемая строка', 18); // true
+// Строка длиннее 10 символов
+lenString('проверяемая строка', 10); // false
+
+// Строка является палиндромом
+ifPalindrom('топот'); // true
+// Несмотря на разный регистр, тоже палиндром
+ifPalindrom('ДовОд'); // true
+// Это не палиндром
+ifPalindrom('Кекс');  // false
+ifPalindrom('Лёша на полке клопа нашёл '); // true
+
+
+onlyNumbers('2023 год');            // 2023
+onlyNumbers('ECMAScript 2022');     // 2022
+onlyNumbers('1 кефир, 0.5 батона'); // 105
+onlyNumbers('агент 007');           // 7
+onlyNumbers('а я томат');           // NaN
+onlyNumbers(2023); // 2023
+onlyNumbers(-1);   // 1
+onlyNumbers(1.5);  // 15
